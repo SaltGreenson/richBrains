@@ -1,0 +1,116 @@
+@import "../../../less/variables";
+
+.container-menu {
+  width: 286px;
+  position: relative;
+  background-color: @white;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+}
+
+.container-menu__head {
+  display: flex;
+  gap: 13px;
+  align-items: center;
+  padding: 35px 0 19px 0;
+  margin: 0 19px;
+  border-bottom: 1px solid @line;
+
+  p {
+    font-size: 13px;
+    font-family: "Helvetica Thin", serif;
+    text-transform: uppercase;
+    color: @green-main;
+  }
+}
+
+.container-menu__menu {
+  list-style: none;
+  padding: 12px 26px 0 29px;
+
+  li {
+    position: relative;
+    display: block;
+    padding: 15px 0 15px 0;
+
+    svg {
+      position: absolute;
+      right: 0;
+    }
+
+    a {
+      padding-right: 29px;
+      font-size: 16px;
+      line-height: 22px;
+      font-family: "Helvetica Bold", serif;
+      text-transform: capitalize;
+      transition: color 200ms;
+    }
+
+    input[type="checkbox"] {
+      z-index: 2;
+      cursor: pointer;
+      opacity: 0;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: -7px;
+    }
+
+    input:checked ~ a {
+      color: @green-main;
+    }
+
+    input:checked ~ svg {
+      transform: rotate(90deg);
+    }
+
+    input:checked ~ svg {
+      transition: transform 200ms;
+      transform: rotate(90deg);
+    }
+
+    input:not(:checked) ~ svg {
+      transition: transform 200ms;
+      transform: rotate(0deg);
+    }
+
+    input:checked ~ .container-menu__submenu {
+      display: block;
+    }
+  }
+}
+
+.container-menu__submenu {
+  display: none;
+  overflow: hidden;
+  list-style: none;
+
+  li {
+    padding: 12px 13px;
+    border-radius: 3px;
+
+    a {
+      font-family: "Helvetica Thin", serif;
+      padding-right: 0;
+    }
+  }
+
+  li:hover {
+    background-color: @hover-menu;
+  }
+
+  li.active {
+    background-color: @green-background;
+
+    a {
+      color: @green-main;
+    }
+  }
+}
+
+.container-menu__btn-container {
+  padding: 20px 0 29px;
+  margin: 0 15px;
+  border-top: 1px solid @line;
+}
