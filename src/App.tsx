@@ -1,10 +1,14 @@
 import React from "react";
-import Menu from "./components/elements/Menu";
+import Card from "./components/elements/Card";
+import { dashboardMock } from "./mockData/dashboard.mock";
 
 function App() {
   return (
     <div>
-      <Menu />
+      <Card
+        description={dashboardMock[0].description}
+        logo={dashboardMock[0].logo}
+      />
     </div>
   );
 }

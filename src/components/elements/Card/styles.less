@@ -1,0 +1,127 @@
+@import "../../../less/variables";
+
+.card-container {
+  position: relative;
+  width: 282px;
+  height: 405px;
+  padding: 30px;
+  border-radius: 2px;
+  background-color: @white;
+  box-shadow: 0 4px 11px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.card-container:hover {
+  .card-container__back-side {
+    top: 0;
+  }
+
+  .card-container__plus-btn {
+    top: 20px;
+  }
+}
+
+.card-container__back-side {
+  z-index: 2;
+  position: absolute;
+  top: -99%;
+  left: 0;
+  width: 282px;
+  height: 405px;
+  padding: 30px;
+  background-color: @green-main;
+  transition: top 300ms;
+
+  button {
+    background-color: @white;
+    color: @green-main;
+  }
+}
+
+.card-container__plus-btn {
+  z-index: 3;
+  position: absolute;
+  top: -20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.card-container__back-side-description {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 31px;
+}
+
+.card-container__back-side-title,
+.card-container__back-side-subtitle {
+  max-width: 172px;
+  line-height: 22px;
+  font-family: "Helvetica Bold", serif;
+  color: @white;
+}
+
+.card-container__back-side-title {
+  font-size: 16px;
+}
+
+.card-container__back-side-subtitle {
+  font-size: 14px;
+}
+
+.card-container__back-side-text {
+  font-size: 14px;
+  font-family: "Helvetica Thin", serif;
+  color: @white;
+}
+
+.card-container__price {
+  font-size: 30px;
+  line-height: 44px;
+  font-family: "Helvetica Bold", serif;
+  padding-bottom: 10px;
+  color: @white;
+}
+
+.card-container__logo {
+  display: flex;
+  justify-content: flex-end;
+  padding-bottom: 30px;
+}
+
+.card-container__top-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 30px;
+
+  .card-container__title-wrapper,
+  .card-container__options-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-container__title-wrapper {
+    gap: 10px;
+    height: 165px;
+  }
+
+  .card-container__options-wrapper {
+    gap: 8px;
+  }
+
+  .card-container__title-small {
+    font-family: "Helvetica Thin", serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: @green-main;
+  }
+
+  .card-container__title-large {
+    font-family: "Helvetica Bold", serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: @text-color;
+    text-transform: capitalize;
+  }
+}

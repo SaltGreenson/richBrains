@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from "react";
-import { menuMock } from "../../../mockData";
+import { menuMock } from "../../../mockData/menu.mock";
 import Button from "../../common/Button";
 import Arrow from "../../common/Signs/Arrow";
 import Hat from "../../common/Signs/Hat";
