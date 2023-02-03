@@ -1,0 +1,24 @@
+.dashboard-layout-container {
+  display: grid;
+  grid-template-columns: 122px 286px auto 126px;
+  grid-template-rows: 133px auto 59px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.dashboard-layout-container__head {
+  grid-row: 1;
+  grid-column: 2 / span 3;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-layout-container__content {
+  grid-row: 2;
+  grid-column: 3;
+}
+
+.dashboard-layout-container__menu {
+  grid-row: 2;
+  grid-column: 2;
+}

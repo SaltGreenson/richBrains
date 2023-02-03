@@ -1,0 +1,26 @@
+@import "../../../less/variables";
+
+.load-more-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  button {
+    font-size: 14px;
+    font-family: "Helvetica Bold", serif;
+    color: @text-color;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: transparent;
+  }
+
+  svg {
+    transition: transform 200ms;
+  }
+}
+
+.load-more-container:hover {
+  svg {
+    transform: rotate(-180deg);
+  }
+}

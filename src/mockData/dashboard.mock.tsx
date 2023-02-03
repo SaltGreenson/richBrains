@@ -19,7 +19,7 @@ export const dashboardMock: ICardProps[] = [
     },
   },
   {
-    logo: <Group3 />,
+    logo: <Group2 />,
     description: {
       descriptionTitle: "MSc Data Analytics and Information Systems Management",
       minDuration: "18 months",
@@ -31,7 +31,7 @@ export const dashboardMock: ICardProps[] = [
     },
   },
   {
-    logo: <Group2 />,
+    logo: <Group3 />,
     description: {
       descriptionTitle: "MSc Data Analytics and Information Systems Management",
       minDuration: "18 months",
