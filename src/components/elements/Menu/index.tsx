@@ -7,6 +7,7 @@ import "./styles.less";
 
 const Menu = () => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isOpenedMobileMenu, setIsOpenedMobileMenu] = useState(false);
 
   const handleOnClick = useCallback(
     (value: number) => () => {
@@ -15,17 +16,38 @@ const Menu = () => {
     [setActiveIndex]
   );
 
+  const handleSetOpenedMenu = useCallback(
+    () => () => {
+      setIsOpenedMobileMenu((prev) => !prev);
+    },
+    [setIsOpenedMobileMenu]
+  );
+
   return (
     <div className="container-menu">
       <div className="container-menu__head">
         <Hat />
         <p>careers</p>
       </div>
-      <ul className="container-menu__menu">
+      <div className="container-menu__mobile-head">
+        <Hat />
+        <p>Choose YOUR Career</p>
+        <input
+          className="container-menu__toggle-btn"
+          type="checkbox"
+          onClick={handleSetOpenedMenu()}
+        />
+        <div className="container-menu_arrow-wrapper">
+          <Arrow />
+        </div>
+      </div>
+      <ul
+        className={`container-menu__menu ${isOpenedMobileMenu ? "active" : ""}`}
+      >
         {menuMock &&
           menuMock.map(({ link, subLinks }) => (
             <li key={link.title}>
-              <input type="checkbox" />
+              <input className="container-menu__toggle-btn" type="checkbox" />
               <a href={link.href}> {link.title} </a>
               <Arrow />
 
