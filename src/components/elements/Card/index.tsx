@@ -33,8 +33,16 @@ const Card = ({ logo, description }: ICardProps): JSX.Element => (
       </div>
       <div className="card-container__options-wrapper">
         <IconLabel icon={<Hat isGrey />}>{description.degree}</IconLabel>
-        <IconLabel icon={<Battery />}>Every 12 weeks</IconLabel>
+        <div className="no-mobile-display">
+          <IconLabel icon={<Battery />}>Every 12 weeks</IconLabel>
+        </div>
       </div>
+      <div className="card-container__top-side-price">
+        £{formatNumberToPound(description.price)}
+      </div>
+    </div>
+    <div className="card-container__top-side-plus">
+      <Plus isGreen />
     </div>
     <Button variant="primary">More Info</Button>
     <div className="card-container__back-side">

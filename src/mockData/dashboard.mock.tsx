@@ -15,7 +15,7 @@ export const dashboardMock: ICardProps[] = [
       degree: "Postgraduate",
       price: 8600,
       startDates: "January, April, July, October",
-      title: "MSc Data Analytics and Information Systems Management",
+      title: "Master of Business Administration (CMI)",
     },
   },
   {
@@ -27,7 +27,7 @@ export const dashboardMock: ICardProps[] = [
       degree: "Postgraduate",
       price: 8600,
       startDates: "January, April, July, October",
-      title: "MSc Data Analytics and Information Systems Management",
+      title: "Master of Business Administration (CMI)",
     },
   },
   {
@@ -39,7 +39,7 @@ export const dashboardMock: ICardProps[] = [
       degree: "Postgraduate",
       price: 3800,
       startDates: "January, April, July, October",
-      title: "MSc Data Analytics and Information Systems Management",
+      title: "Master of Business Administration (CMI)",
     },
   },
   {
@@ -51,7 +51,7 @@ export const dashboardMock: ICardProps[] = [
       degree: "Postgraduate",
       price: 1600,
       startDates: "January, April, July, October",
-      title: "MSc Data Analytics and Information Systems Management",
+      title: "Master of Business Administration (CMI)",
     },
   },
   {
@@ -63,7 +63,7 @@ export const dashboardMock: ICardProps[] = [
       degree: "Postgraduate",
       price: 8500,
       startDates: "January, April, July, October",
-      title: "MSc Data Analytics and Information Systems Management",
+      title: "Master of Business Administration (CMI)",
     },
   },
   {
@@ -75,7 +75,7 @@ export const dashboardMock: ICardProps[] = [
       degree: "Postgraduate",
       price: 8600,
       startDates: "January, April, July, October",
-      title: "MSc Data Analytics and Information Systems Management",
+      title: "Master of Business Administration (CMI)",
     },
   },
 ];

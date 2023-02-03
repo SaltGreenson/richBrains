@@ -4,6 +4,11 @@
   grid-template-rows: 133px auto 59px;
   max-width: 1440px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 70px 52px auto;
+  }
 }
 
 .dashboard-layout-container__head {
@@ -11,14 +16,27 @@
   grid-column: 2 / span 3;
   display: flex;
   align-items: center;
+
+  @media (max-width: 768px) {
+    grid-column: 2;
+  }
 }
 
 .dashboard-layout-container__content {
   grid-row: 2;
   grid-column: 3;
+
+  @media (max-width: 768px) {
+    grid-row: 3;
+    grid-column: 2;
+  }
 }
 
 .dashboard-layout-container__menu {
   grid-row: 2;
   grid-column: 2;
+
+  @media (max-width: 768px) {
+    grid-row: 2;
+  }
 }

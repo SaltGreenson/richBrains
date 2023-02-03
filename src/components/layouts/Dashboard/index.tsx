@@ -15,7 +15,7 @@ const DashboardLayout = ({
 }: DashboardProps): JSX.Element => (
   <div className="dashboard-layout-container" {...props}>
     <div className="dashboard-layout-container__head">{head}</div>
-    <div className="dashboard-layout-container__menu">{menu}</div>
+    {/*<div className="dashboard-layout-container__menu">{menu}</div>*/}
     <div className="dashboard-layout-container__content">{children}</div>
   </div>
 );
